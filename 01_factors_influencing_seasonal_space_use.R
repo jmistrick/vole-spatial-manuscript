@@ -1,3 +1,5 @@
+# Run using R version 4.3.2 "Eye Holes"
+
 # 01 - Factors influencing seasonal space use
 # Author: Janine Mistrick
 # Associated Publication:
@@ -15,8 +17,8 @@
 
 
 # load packages
-library(here)
-library(tidyverse)
+library(here) #v1.0.1
+library(tidyverse) #v2.0.0
 
 #clear environment
 rm(list = ls())
@@ -28,7 +30,6 @@ fulltrap <- readRDS(file = "fulltrap21_JAEfinal.rds")
 
 #alternatively, load capture data from csv file and format data columns
 fulltrap <- read.csv(here("fulltrap21_JAEfinal.csv")) %>%
-  select(!X) %>% #remove first column (contains row number)
   mutate(year = as.numeric(year),
          month = factor(month, levels=c("june", "july", "aug", "sept", "oct")),
          season = factor(season, levels=c("summer", "fall")),

@@ -1,3 +1,5 @@
+# Run using R version 4.3.2 "Eye Holes"
+
 #Functions from supplementary materials of Wanelik & Farine 2022
 
   # Wanelik, K.M., Farine, D.R. A new method for characterising shared space use networks using animal trapping data.

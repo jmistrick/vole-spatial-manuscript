@@ -1,3 +1,5 @@
+# Run using R version 4.3.2 "Eye Holes"
+
 # 02-1 - Functions to construct spatial overlap networks
 # Author: Janine Mistrick
 # Associated Publication:

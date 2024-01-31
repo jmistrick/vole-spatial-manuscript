@@ -1,3 +1,5 @@
+# Run using R version 4.3.2 "Eye Holes"
+
 # 03 - Data analysis, tables, and figures
 # Author: Janine Mistrick
 
@@ -9,12 +11,12 @@
   # Hall, Richard; Budischak, Sarah; Forbes, Kristian; Craft, Meggan
 
 # load packages
-library(here)
-library(tidyverse)
-library(igraph)
-library(ggridges)
-library(ggforce) #for geom_circle in ggplot
-library(cowplot)
+library(here) #v1.0.1
+library(tidyverse) #v2.0.0
+library(igraph) #v1.6.0
+library(ggridges) #0.5.0
+library(ggforce) #for geom_circle in ggplot v0.4.1
+library(cowplot) #v1.1.2
 
 #clear environment
 rm(list = ls())
@@ -24,7 +26,6 @@ ft21 <- readRDS(here("fulltrap21_JAEfinal.rds"))
 
 #alternatively, load capture data from csv file and format data columns
 fulltrap <- read.csv(here("fulltrap21_JAEfinal.csv")) %>%
-  select(!X) %>% #remove first column (contains row number)
   mutate(year = as.numeric(year),
          month = factor(month, levels=c("june", "july", "aug", "sept", "oct")),
          season = factor(season, levels=c("summer", "fall")),

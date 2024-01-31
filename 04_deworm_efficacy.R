@@ -1,3 +1,5 @@
+# Run using R version 4.3.2 "Eye Holes"
+
 # 04 - Efficacy of deworming treatment
 # Author: Janine Mistrick
 # Code developed with input from JASMINE S.M. VEITCH & SARAH A. BUDISCHAK
@@ -14,10 +16,10 @@
 #This code runs with Fecal Egg Count (FEC) data from Dr. Sarah Budischak "prelim_FEC_data.csv"
 
 #load packages
-library(here)
-library(tidyverse)
-library(lme4)
-library(lmerTest) #like lme4 but with pvalues
+library(here) #v1.0.1
+library(tidyverse) #2.0.0
+library(lme4) #v1.1-35.1
+library(lmerTest) #like lme4 but with pvalues v3.1-3
 
 # #clear environment
 rm(list = ls())

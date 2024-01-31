@@ -1,3 +1,5 @@
+# Run using R version 4.3.2 "Eye Holes"
+
 # 02 - Construct Spatial Overlap Networks
 # Author: Janine Mistrick
 # Associated Publication:
@@ -10,12 +12,13 @@
 # to estimate parameters describing bank vole space use, construct spatial overlap networks representing
 # populations of bank voles at a given study site, and calculate network metrics from these networks
 
+
 # load packages
-library(here)
-library(tidyverse)
-library(igraph)
-library(lubridate)
-library(janitor)
+library(here) #v1.0.1
+library(tidyverse) #v2.0.0
+library(igraph) #v1.6.0
+library(lubridate) #v1.9.3
+library(janitor) #v2.2.0
 
 #clear environment
 rm(list = ls())
@@ -30,7 +33,6 @@ fulltrap21 <- readRDS(here("fulltrap21_JAEfinal.rds"))
 
 #alternatively, load capture data from csv file and format data columns
 fulltrap <- read.csv(here("fulltrap21_JAEfinal.csv")) %>%
-  select(!X) %>% #remove first column (contains row number)
   mutate(year = as.numeric(year),
          month = factor(month, levels=c("june", "july", "aug", "sept", "oct")),
          season = factor(season, levels=c("summer", "fall")),
