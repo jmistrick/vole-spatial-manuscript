@@ -22,10 +22,10 @@ library(cowplot) #v1.1.2
 rm(list = ls())
 
 #load vole capture data from RDS
-ft21 <- readRDS(here("fulltrap21_JAEfinal.rds"))
+ft21 <- readRDS(here("fulltrap21_volecapturedata.rds"))
 
 #alternatively, load capture data from csv file and format data columns
-fulltrap <- read.csv(here("fulltrap21_JAEfinal.csv")) %>%
+fulltrap <- read.csv(here("fulltrap21_volecapturedata.csv")) %>%
   mutate(year = as.numeric(year),
          month = factor(month, levels=c("june", "july", "aug", "sept", "oct")),
          season = factor(season, levels=c("summer", "fall")),
@@ -178,7 +178,7 @@ for(i in 1:length(overlap_network_list)) {
   
   set.seed(2111994)
   
-  png(filename = paste("spatial_overlap_", "network-wt.deg_>0.05_", 
+  png(filename = paste("spatial_overlap_", "network-wt.deg0.05_", 
                        names(overlap_network_list)[[i]], "_2021", ".png", sep = ""),
       width=10 , height=3, units="in", res=600)
   
@@ -201,12 +201,12 @@ for(i in 1:length(overlap_network_list)) {
     
     #keep the layout the same
     #https://www.kateto.net/wp-content/uploads/2016/01/NetSciX_2016_Workshop.pdf
-    l <- layout_with_fr(g)
+    l <- layout_with_fr(g2)
     
     #for edges of varying thickness
     plot(g2, vertex.size=5, vertex.label=NA,
          layout=l,
-         edge.width = ((E(g)$weight)*3),
+         edge.width = ((E(g2)$weight)*3),
          edge.color = "#545454",
          vertex.color = "black",
          main = paste(names(overlap_network_list[[i]])[j]))
@@ -229,7 +229,7 @@ for(i in 1:length(overlap_network_list)) {
 tagsex <- ft21 %>% group_by(tag) %>% slice(1) %>% select(tag, sex, season_breeder)
 
 #join network metrics with metadata on vole sex, and site treatment data
-netmets21 <- readRDS(here("network_metrics.rds")) %>% left_join(read.csv(here('grid_trts.csv')), by="site") %>%
+netmets21 <- readRDS(here("network_metrics.rds")) %>% left_join(read.csv(here('site_trts.csv')), by="site") %>%
   unite(trt, food_trt, helm_trt) %>%
   left_join(tagsex, by="tag") %>%
   relocate(c(site, trt, month, n.node, tag, sex, season_breeder), .before=wt.deg)
