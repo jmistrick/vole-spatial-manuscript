@@ -5,7 +5,7 @@ In this study, we leverage a large-scale field experiment of wild bank voles (<i
 
 A series of R scripts and data files are used to estimate space use following the methods of Wanelik & Farine (2022)* and construct spatial overlap networks in the vole populations. The analysis conducted here and figures and tables generated all appear in the aforementioned manuscript.
 
-The necessary vole capture data from the 2021 field season can be found in either a .rds file or a .csv (<i>fulltrap21_JAEfinal</i>). An additional data file linking the sites with their experimental treatments is also included (<i>grid_trts.csv</i>)
+The necessary vole capture data from the 2021 field season can be found in either a .rds file or a .csv (<i>fulltrap21_volecapturedata</i>). An additional data file linking the sites with their experimental treatments is also included (<i>site_trts.csv</i>)
 
 The files are numbered to direct the reader to their sequence for analysis:
 1. Analysis of factors (sex, reproductive status, treatment) influencing seasonal space use (<i>01_factors_influencing_seasonal_space_use.R</i>). This script sources the functions developed by Wanelik & Farine (2022)* which can be found in the file (<i>01-1_wanelik_farine_2022_functions.R</i>).
