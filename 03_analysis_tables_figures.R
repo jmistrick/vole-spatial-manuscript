@@ -502,8 +502,8 @@ normbindeg <- netmets21 %>%
   labs(x="Normalized Unweighted Degree", y="Count",
        fill="Treatment") #title="Histogram of NORMALIZED Binary Degree Distribution"
 
-png(filename = 'SUPP_FIG_S2-B-C-D.png', width = 12, height = 12, units = "in", res=600)
-plot_grid(wtdeg, bindeg, normbindeg, ncol = 1)
+png(filename = 'SUPP_Fig_S2-B-C-D.png', width = 12, height = 12, units = "in", res=600)
+cowplot::plot_grid(wtdeg, bindeg, normbindeg, ncol = 1)
 dev.off()
 
 ######################## end #############################
