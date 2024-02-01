@@ -29,10 +29,10 @@ rm(list = ls())
 #######------------------- CALCULATE NETWORK METRICS -------------------###############
 
 #load the 2021 capture data from RDS
-fulltrap21 <- readRDS(here("fulltrap21_JAEfinal.rds"))
+fulltrap21 <- readRDS(here("fulltrap21_volecapturedata.rds"))
 
 #alternatively, load capture data from csv file and format data columns
-fulltrap <- read.csv(here("fulltrap21_JAEfinal.csv")) %>%
+fulltrap <- read.csv(here("fulltrap21_volecapturedata.csv")) %>%
   mutate(year = as.numeric(year),
          month = factor(month, levels=c("june", "july", "aug", "sept", "oct")),
          season = factor(season, levels=c("summer", "fall")),
@@ -57,7 +57,7 @@ source(here("02-1_functions_construct_overlap_networks.R"))
 #generate space use distribution parameters
 generate_params(data = fulltrap21,
                 params_file = "spaceuse_parameters.rds")
-#output file:
+#view output file:
 # params21 <- readRDS(here("spaceuse_parameters.rds"))
 
 
@@ -66,7 +66,7 @@ create_overlap_networks(data = fulltrap21,
                         centroids_file = "monthly_centroids.rds",
                         params_file = "spaceuse_parameters.rds",
                         networks_file = "overlap_networks.rds")
-#output files:
+#view output files:
 # centroids21 <- readRDS(here("monthly_centroids.rds"))
 # overlapnets21 <- readRDS(here("overlap_networks.rds"))
 
@@ -75,5 +75,5 @@ create_overlap_networks(data = fulltrap21,
 calculate_network_metrics(data=fulltrap21,
                           networks_file = "overlap_networks.rds",
                           netmets_file = "network_metrics.rds")
-#output file:
+#view output file:
 # netmets21 <- readRDS(here("network_metrics.rds"))
