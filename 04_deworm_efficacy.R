@@ -13,7 +13,8 @@
 #Effect of deworm treatment on helminth presence and helminth infection intensity
 
 #Testing on FULL 2021 FEC dataset (1025 entries)
-#This code runs with Fecal Egg Count (FEC) data from Dr. Sarah Budischak "prelim_FEC_data.csv"
+#This code runs with Fecal Egg Count (FEC) data from Dr. Sarah Budischak
+  #These data are still preliminary and are unpublished. Accessed Dec 19 2023.
 
 #load packages
 library(here) #v1.0.1
@@ -28,6 +29,7 @@ rm(list = ls())
 ############################## LOAD DATA #######################################
 
 #metadata for FEC data
+  #this metadata file is unpublished
 metadata <- readRDS(here("fulltrap21_JAEfinal_withsampID.rds")) %>% 
   group_by(samp_id) %>% slice(1) %>% #remove duplicate entries per occasion (ie week recaps)
   dplyr::select(c("site", "trt", "food_trt", "helm_trt",
@@ -35,6 +37,7 @@ metadata <- readRDS(here("fulltrap21_JAEfinal_withsampID.rds")) %>%
                   "tag", "samp_id", "sex", "season_breeder"))
 
 #preliminary FEC data from Sarah v.Dec 19 2023
+  #this data file is unpublished
 FECdata <- read_csv(here("prelim_FEC_data.csv"))
 
 #pull 2021 FEC data, combine with metadata, keep only complete entries
