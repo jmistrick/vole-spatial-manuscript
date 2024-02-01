@@ -26,10 +26,10 @@ rm(list = ls())
 ##---------------- LOAD THE CAPTURE DATA ----------------------
 
 #load the 2021 fulltrap dataset as an R data file
-fulltrap <- readRDS(file = "fulltrap21_JAEfinal.rds")
+fulltrap <- readRDS(file = "fulltrap21_volecapturedata.rds")
 
 #alternatively, load capture data from csv file and format data columns
-fulltrap <- read.csv(here("fulltrap21_JAEfinal.csv")) %>%
+fulltrap <- read.csv(here("fulltrap21_volecapturedata.csv")) %>%
   mutate(year = as.numeric(year),
          month = factor(month, levels=c("june", "july", "aug", "sept", "oct")),
          season = factor(season, levels=c("summer", "fall")),
