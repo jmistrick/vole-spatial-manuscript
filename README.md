@@ -21,4 +21,4 @@ The files are numbered to direct the reader to their sequence for analysis:
 
 The analyses undertaken herein would not be possible without the work of Klara Wanelik and Damien Farine to develop the methods for characterizing shared space use using trapping data in wild rodents.
 
-* Wanelik, K.M., Farine, D.R. A new method for characterising shared space use networks using animal trapping data.Behav Ecol Sociobiol 76, 127 (2022). https://doi.org/10.1007/s00265-022-03222-5
+*Wanelik, K.M., Farine, D.R. A new method for characterising shared space use networks using animal trapping data.Behav Ecol Sociobiol 76, 127 (2022). https://doi.org/10.1007/s00265-022-03222-5
