@@ -5,6 +5,8 @@ This repository is archived with Zenodo: <a href="https://zenodo.org/doi/10.5281
 
 In this study, we leverage a large-scale field experiment of wild bank voles (<i>Clethrionomys glareolus</i>) consisting of resource supplementation and parasite removal by oral dewormer to quantify the effects of food supplementation and helminth removal on space use and spatial overlap in wild rodent populations.
 
+---
+
 A series of R scripts and data files are used to estimate space use following the methods of Wanelik & Farine (2022)* and construct spatial overlap networks in the vole populations. The analysis conducted here and figures and tables generated all appear in the aforementioned manuscript.
 
 The necessary vole capture data from the 2021 field season can be found in either a .rds file or a .csv (<i>fulltrap21_volecapturedata</i>). An additional data file linking the sites with their experimental treatments is also included (<i>site_trts.csv</i>)
@@ -15,6 +17,8 @@ The files are numbered to direct the reader to their sequence for analysis:
 3. Data analysis and visualization including all figures and tables found in the main text and supplemental materials (<i>03_analysis_tables_figures.R</i>).
 4. Brief analysis of the efficacy of the deworming treatment (<i>04_deworm_efficacy.R</i>)
 
+---
+
 The analyses undertaken herein would not be possible without the work of Klara Wanelik and Damien Farine to develop the methods for characterizing shared space use using trapping data in wild rodents.
 
-*Wanelik, K.M., Farine, D.R. A new method for characterising shared space use networks using animal trapping data.Behav Ecol Sociobiol 76, 127 (2022). https://doi.org/10.1007/s00265-022-03222-5
+* Wanelik, K.M., Farine, D.R. A new method for characterising shared space use networks using animal trapping data.Behav Ecol Sociobiol 76, 127 (2022). https://doi.org/10.1007/s00265-022-03222-5
