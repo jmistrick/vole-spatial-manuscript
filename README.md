@@ -1,4 +1,4 @@
-# vole-spatial-manuscript
+# Space Use and Spatial Overlap in Wild Bank Voles
 Associated code and data files for manuscript: <i>"Effects of Food Supplementation and Helminth Removal on Space Use and Spatial Overlap in Wild Rodent Populations"</i> J. Mistrick, J.S.M. Veitch, S.M. Kitchen, S. Clague, B.C. Newman, R.J. Hall, S.A. Budischak, K.M. Forbes, M.E. Craft
 
 This repository is archived with Zenodo: <a href="https://zenodo.org/doi/10.5281/zenodo.10603001"><img src="https://zenodo.org/badge/580540737.svg" alt="DOI"></a>
